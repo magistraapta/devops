@@ -1,0 +1,22 @@
+# ===========================================
+# Example Terraform Variables
+# ===========================================
+# Copy this file to terraform.tfvars and update the values
+
+# AWS Configuration
+aws_region        = "ap-southeast-1"
+availability_zone = "ap-southeast-1a"
+project_name      = "three-tier-app"
+
+# Network Configuration
+vpc_cidr            = "10.0.0.0/16"
+public_subnet_cidr  = "10.0.1.0/24"
+private_subnet_cidr = "10.0.2.0/24"
+db_subnet_cidr      = "10.0.3.0/24"
+
+# Compute Configuration
+instance_type = "t2.micro"
+key_name      = "app-key-pair"  # Must exist in AWS!
+
+# Database Configuration (REQUIRED - no default)
+db_password = "YourSecurePassword123!"  # Change this!
